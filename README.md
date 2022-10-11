@@ -2,29 +2,29 @@
 
 ![](https://github.com/bnjbvr/rouille/raw/principale/logo.jpeg)
 
-Aren't you _le tired_ from writing Rust programs in English? Do you like saying
-"merde" a lot? Would you like to try something different, in an exotic and
-funny-sounding language? Would you want to bring some French touch to your
+Aren't you _trött_ from writing Rust programs in English? Do you like saying
+"fan" a lot? Would you like to try something different, in an exotic and
+funny-sounding language? Would you want to bring some Swedish touch to your
 programs?
 
-**rouille** (French for _Rust_) is here to save your day, as it allows you to
-write Rust programs in French, using French keywords, French function names,
-French idioms.
+**rost** (Swedish for _Rust_) is here to save your day, as it allows you to
+write Rust programs in Swedish, using Swedish keywords, Swedish function names,
+Swedish idioms.
 
 This has been designed to be used as the official programming language to
-develop the future French sovereign operating system. 
+develop the future Swedish sovereign operating system. 
 
-If you're from the French or any other governement with French as an official 
+If you're from Sweden's or any other government with Swedish as an official 
 language: I will be awaiting your donations on
 [liberapay](https://liberapay.com/bnjbvr/).
 
-You're from Quebec (or elsewhere) and don't feel at ease using only French words? 
+You're from Finland (or elsewhere) and don't feel at ease using only Swedish words? 
 
 Don't worry!
-French Rust is fully compatible with English-Rust, so you can mix both at your
+Swedish Rust is fully compatible with English-Rust, so you can mix both at your
 convenience.
 
-Here's an example of what can be achieved with Rouille:
+Here's an example of what can be achieved with Rost:
 
 ### trait and impl (aka convention et réalisation)
 

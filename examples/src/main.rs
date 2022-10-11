@@ -1,85 +1,85 @@
-rouille::rouille! {
-    externe cagette rouille;
+rost::rost! {
+    extern låda rost;
 
-    utilisons std::collections::Dictionnaire comme Dico;
+    använd std::collections::Ordbok som Bok;
 
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine);
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine>;
+    konvention NyckelVärde {
+        funktion skriv(&själv, nyckel: Sträng, värde: Sträng);
+        funktion läs(&själv, nyckel: Sträng) -> Resultat<Kanske<&Sträng>, Sträng>;
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaine, Chaine>> = Rien;
+    statisk föränderlig ORDBOK: Kanske<Bok<Sträng, Sträng>> = Ingenting;
 
-    structure Concrète;
+    struktur Konkret;
 
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
+    implementera NyckelVärde för Konkret {
+        funktion skriv(&själv, nyckel: Sträng, värde: Sträng) {
+            låt bok = osäker {
+                ORDBOK.ta_eller_för_in_med(Standard::standard)
             };
-            dico.insérer(clé, valeur);
+            bok.för_in(nyckel, värde);
         }
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+        funktion läs(&själv, nyckel: Sträng) -> Resultat<Kanske<&Sträng>, Sträng> {
+            om låt Någon(bok) = osäker { ORDBOK.som_ref() } {
+                Bra(bok.läs(&nyckel))
+            } annars {
+                Fel("hämta ord".till())
             }
         }
     }
 
-    public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaine>> {
-        si i % 2 == 1 {
-            si i == 42 {
-                Quelque(Arf(Chaine::depuis("merde")))
-            } sinon {
-                Quelque(Bien(33))
+    publik(låda) funktion kanske(i: u32) -> Kanske<Resultat<u32, Sträng>> {
+        om i % 2 == 1 {
+            om i == 42 {
+                Någon(Fel(Sträng::från("merde")))
+            } annars {
+                Någon(Bra(33))
             }
-        } sinon {
-            Rien
+        } annars {
+            Ingenting
         }
     }
 
-    asynchrone fonction exemple() {
+    asynkron funktion exempel() {
     }
 
-    asynchrone fonction exemple2() {
-        exemple().attend;
+    asynkron funktion exempel2() {
+        exempel().vänta;
     }
 
-    fonction principale() {
-        soit mutable x = 31;
+    funktion huvud() {
+        låt föränderlig x = 31;
 
-        selon x {
+        match x {
             42 => {
-                affiche!("omelette du fromage")
+                skrivln!("omelette du fromage")
             }
-            _ => affiche!("voila")
+            _ => skrivln!("voila")
         }
 
-        pour i de 0..10 {
-            soit val = boucle {
-                arrête i;
+        för i av 0..10 {
+            låt val = slinga {
+                bryt i;
             };
 
-            tant que x < val {
+            medan va x < val {
                 x += 1;
             }
 
-            x = si soit Quelque(resultat) = peut_etre(i) {
-                resultat.déballer()
-            } sinon {
+            x = om låt Någon(resultat) = kanske(i) {
+                resultat.packa_upp()
+            } annars {
                 12
             };
         }
 
-        //secondaire();
+        //sekundär();
     }
 
-    #[légal(code_inaccessible)]
-    fonction secondaire() {
-        merde!("oh non"); // for the true French experience
-        calisse!("tabernacle"); // for friends speaking fr-ca
-        oups!("fetchez la vache"); // in SFW contexts
+    #[tillåt(onåbar_kod)]
+    funktion sekundär() {
+        fan!("skit också"); // for the true Swedish experience
+        huvva!("men så obra!"); // for friends from up north
+        oj!("de här sket sig"); // in SFW contexts
     }
 }
