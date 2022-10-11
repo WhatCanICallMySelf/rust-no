@@ -77,7 +77,7 @@ funktion sekundär() {
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
 syntax. Sådär! Det var det.
 
-## les contributions
+## bidrag / contributions
 
 First of all, _tack så mycket_ for considering participating to this joke, the
 Swedish government will thank you later! Feel free to throw in a few identifiers
@@ -93,7 +93,7 @@ Please don't introduce swear words, though: we will not excuse your Swedish.
 - making a bit of fun about programming languages that do this seriously,
   though I can see their utility.
 - winking at [Marcel](https://github.com/brouberol/marcel)
-- c'est chic
+- det är ball
 
 ## Other languages
 
@@ -128,12 +128,12 @@ Please don't introduce swear words, though: we will not excuse your Swedish.
 - Thai: [sanim (สนิม)](https://github.com/korewaChino/sanim)
 - Swiss: [roeschti](https://github.com/Georg-code/roeschti)
 
-## un grand merci
+## ett stort tack till
 
 - [@VentGrey](https://twitter.com/VentGrey) for making a logo!
 
-## la license
+## licensen
 
 [License Publique Rien à Branler](http://sam.zoy.org/lprab/),
-_le_ official translation of the [WTFPL](http://www.wtfpl.net/)
+_den_ official translation of the [WTFPL](http://www.wtfpl.net/)
 by the same author.
