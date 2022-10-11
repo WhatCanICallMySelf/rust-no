@@ -1,6 +1,6 @@
-# rouille
+# rost
 
-![](https://github.com/bnjbvr/rouille/raw/principale/logo.jpeg)
+![](https://github.com/vojd/rost/raw/huvud/logo.jpeg)
 
 Aren't you _trött_ from writing Rust programs in English? Do you like saying
 "fan" a lot? Would you like to try something different, in an exotic and
@@ -29,30 +29,32 @@ Here's an example of what can be achieved with Rost:
 ### trait and impl (aka convention et réalisation)
 
 ```rust
-rouille::rouille! {
-    utilisons std::collections::Dictionnaire comme Dico;
+rost::rost! {
+    extern låda rost;
 
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine);
-        fonction lire(&soi, clé: Chaine) -> PeutÊtre<&Chaine>;
+    använd std::collections::Ordbok som Bok;
+
+    konvention NyckelVärde {
+        funktion skriv(&själv, nyckel: Sträng, värde: Sträng);
+        funktion läs(&själv, nyckel: Sträng) -> Resultat<Kanske<&Sträng>, Sträng>;
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaine, Chaine>> = Rien;
+    statisk föränderlig ORDBOK: Kanske<Bok<Sträng, Sträng>> = Ingenting;
 
-    structure Concrète;
+    struktur Konkret;
 
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
+    implementera NyckelVärde för Konkret {
+        funktion skriv(&själv, nyckel: Sträng, värde: Sträng) {
+            låt bok = osäker {
+                ORDBOK.ta_eller_för_in_med(Standard::standard)
             };
-            dico.insérer(clé, valeur);
+            bok.för_in(nyckel, värde);
         }
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+        funktion läs(&själv, nyckel: Sträng) -> Resultat<Kanske<&Sträng>, Sträng> {
+            om låt Någon(bok) = osäker { ORDBOK.som_ref() } {
+                Bra(bok.läs(&nyckel))
+            } annars {
+                Fel("hämta ord".till())
             }
         }
     }
@@ -62,29 +64,29 @@ rouille::rouille! {
 ### Support for regional languages
 
 ```rust
-#[légal(code_inaccessible)]
-fonction secondaire() {
-    merde!("oh non"); // for the true French experience
-    calisse!("tabarnak"); // for friends speaking fr-ca
-    oups!("fetchez la vache"); // in SFW contexts
+#[tillåt(onåbar_kod)]
+funktion sekundär() {
+  fan!("skit också"); // for the true Swedish experience
+  huvva!("men så obra!"); // for friends from up north
+  oj!("de här sket sig"); // in SFW contexts
 }
 ```
 
 ### Other examples
 
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
-syntax. Voilà, that's it.
+syntax. Sådär! Det var det.
 
 ## les contributions
 
-First of all, _merci beaucoup_ for considering participating to this joke, the
-French government will thank you later! Feel free to throw in a few identifiers
-here and there, and open a pull-request against the `principale` (French for
+First of all, _tack så mycket_ for considering participating to this joke, the
+Swedish government will thank you later! Feel free to throw in a few identifiers
+here and there, and open a pull-request against the `huvud` (Swedish for
 `main`) branch.
 
-Please don't introduce swear words, though: we will not excuse your French.
+Please don't introduce swear words, though: we will not excuse your Swedish.
 
-## but why would you do zat
+## but why would you do det
 
 - horsin around
 - playing with raw proc macros
