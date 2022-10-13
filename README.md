@@ -2,7 +2,7 @@
 
 ![](https://github.com/vojd/rost/raw/huvud/logo.jpeg)
 
-Aren't you _trött_ from writing Rust programs in English? Do you like saying
+Aren't you _uttråkad_ from writing Rust programs in English? Do you like saying
 "fan" a lot? Would you like to try something different, in an exotic and
 funny-sounding language? Would you want to bring some Swedish touch to your
 programs?
@@ -15,8 +15,9 @@ This has been designed to be used as the official programming language to
 develop the future Swedish sovereign operating system. 
 
 If you're from Sweden's or any other government with Swedish as an official 
-language: I will be awaiting your donations on
+language: [bnjbvr](https://github.com/bnjbvr) will be awaiting your donations on
 [liberapay](https://liberapay.com/bnjbvr/).
+(Vänligen notera att [bnjbvr](https://github.com/bnjbvr) skrev den ursprungliga Franska versionen och förtjänar därför världens tack)
 
 You're from Finland (or elsewhere) and don't feel at ease using only Swedish words? 
 
@@ -26,8 +27,8 @@ convenience.
 
 Here's an example of what can be achieved with Rost:
 
-### trait and impl (aka convention et réalisation)
-
+### trait and impl (aka konvention och implementera)
+ 
 ```rust
 rost::rost! {
     extern låda rost;
@@ -77,23 +78,22 @@ funktion sekundär() {
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
 syntax. Sådär! Det var det.
 
-## bidrag / contributions
+## Bidrag / contributions
 
-First of all, _tack så mycket_ for considering participating to this joke, the
+First of all, _tack så mycket_ for considering participating in this joke, the
 Swedish government will thank you later! Feel free to throw in a few identifiers
 here and there, and open a pull-request against the `huvud` (Swedish for
 `main`) branch.
 
 Please don't introduce swear words, though: we will not excuse your Swedish.
 
-## but why would you do det
+## But varför would you do that?
 
-- horsin around
-- playing with raw proc macros
-- making a bit of fun about programming languages that do this seriously,
-  though I can see their utility.
-- winking at [Marcel](https://github.com/brouberol/marcel)
-- det är ball
+- Det är ball
+- We must not let the Finns and Danes down 
+- To tease the Norwegians who don't have a localized Rust (yet)
+- To learn more about proc_macros
+- Det är verkligen ball
 
 ## Other languages
 
@@ -128,12 +128,14 @@ Please don't introduce swear words, though: we will not excuse your Swedish.
 - Thai: [sanim (สนิม)](https://github.com/korewaChino/sanim)
 - Swiss: [roeschti](https://github.com/Georg-code/roeschti)
 
-## ett stort tack till
+## Ett stort tack till
 
-- [@VentGrey](https://twitter.com/VentGrey) for making a logo!
+- [bnjbvr](https://github.com/bnjbvr) for making the original French version on which this is based
 
-## licensen
+## Licensen
 
 [License Publique Rien à Branler](http://sam.zoy.org/lprab/),
-_den_ official translation of the [WTFPL](http://www.wtfpl.net/)
+the official translation of the [WTFPL](http://www.wtfpl.net/)
 by the same author.
+
+(Ok, den är på Franska men det går ändå)
