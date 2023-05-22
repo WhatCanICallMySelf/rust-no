@@ -1,6 +1,6 @@
 # russt
 
-![](https://github.com/vojd/rost/raw/huvud/logo.jpeg)
+![](logo.png)
 
 Aren't you _utmattet_ from writing Rust programs in English? Do you like saying
 "kranglefant" a lot? Would you like to try something different, in an exotic and
