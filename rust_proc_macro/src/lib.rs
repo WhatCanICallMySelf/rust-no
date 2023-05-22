@@ -34,7 +34,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "standard" => "default",
         "som_ref" => "as_ref",
         "io" => "io",
-        "extern" => "extern",
+        "ekstern" => "extern",
         "falsk" => "false",
         "funktion" => "fn",
         "over" => "super",
