@@ -1,4 +1,4 @@
-# rost
+# russt
 
 ![](https://github.com/vojd/rost/raw/huvud/logo.jpeg)
 
